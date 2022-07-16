@@ -1,0 +1,228 @@
+.toggleMenu {
+    display: none;
+    float: right;
+    margin: 20px 5px 0 0;
+}
+
+.header-fixed {
+    position: fixed;
+    top: 0%;
+    z-index: 9999;
+    width: 100%;
+    display: block;
+}
+
+.header-fixed-responsive {
+    position: fixed;
+    top: 0%;
+    z-index: 9999;
+    width: 100%;
+    display: block;
+    -webkit-box-shadow: 0px 6px 28px -19px rgba(0,0,0,0.98);
+    -moz-box-shadow: 0px 6px 28px -19px rgba(0,0,0,0.98);
+    box-shadow: 0px 6px 28px -19px rgba(0,0,0,0.98);
+}
+
+.nav {
+    list-style: none;
+    *zoom: 1;
+    position: relative;
+    float: right;
+}
+
+    .nav:before, .nav:after {
+        content: " ";
+        display: table;
+    }
+
+    .nav:after {
+        clear: both;
+    }
+
+    .nav ul {
+        list-style: none;
+        width: 9em;
+    }
+
+    .nav a {
+        color: #5d5d5d;
+        color: #000;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .nav li {
+        float: left;
+        padding: 0px 0px;
+    }
+
+        .nav li a:hover, .nav li a.active {
+            text-decoration: none;
+            background-color: transparent;
+            color: #fff;
+            -webkit-transition: .3s all ease-in;
+            -moz-transition: .3s all ease-in;
+            -ms-transition: .3s all ease-in;
+            -o-transition: .3s all ease-in;
+        }
+
+        .nav li a:focus {
+            background-color: transparent;
+        }
+
+    .nav li {
+        position: relative;
+    }
+
+    .nav > li {
+        float: left;
+    }
+
+        .nav > li > .parent {
+            background-image: url("images/downArrow.html");
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        .nav > li > a {
+            display: block;
+            padding: 24px 27px;
+            color: #5d5d5d;
+        }
+
+    .nav li ul {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .nav > li.hover > ul {
+        left: 0;
+    }
+
+    .nav li li.hover ul {
+        left: 100%;
+        top: 0;
+    }
+
+    .nav li li a {
+        display: block;
+        background: #5d5d5d;
+        position: relative;
+        z-index: 100;
+        border-top: 1px solid #175e4c;
+    }
+
+    .nav li li li a {
+        background: #249578;
+        z-index: 200;
+        border-top: 1px solid #1d7a62;
+    }
+
+#navigation-menu a.mPS2id-highlight {
+    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .toggleMenu {
+        display: block;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .nav > li {
+        float: none;
+    }
+
+    .nav {
+        position: absolute;
+        width: 100%;
+        top: 62px;
+        left: 0;
+        display: none;
+    }
+
+        .nav li {
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            display: inline-block !important;
+            width: 100%;
+            background-color: #411d52;
+        }
+
+        .nav > li > a {
+            padding: 12px 27px;
+        }
+
+        .nav li:first-child {
+            border-top: 0px;
+        }
+
+        .nav li a, .nav li a:hover, .nav li a:focus {
+            color: #909090;
+        }
+
+    #navigation-menu a.mPS2id-highlight {
+        background-color: #fff;
+        color: #b50b13;
+    }
+
+    .nav > li > .parent {
+        background-position: 95% 50%;
+    }
+
+    .nav li li .parent {
+        background-image: url("images/downArrow.html");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+
+    .nav ul {
+        display: block;
+        width: 100%;
+        background-color: #900f12;
+    }
+
+    .nav > li.hover > ul, .nav li li.hover ul {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        top: 60px;
+    }
+
+        .nav > li > a {
+            display: block;
+            padding: 10px 15px !important;
+        }
+}
+
+@media screen and (max-width: 667px) {
+    .toggleMenu {
+        margin: 22px 0px 14px 0px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        top: 48px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .toggleMenu {
+        margin: 14px 0px 0px 0px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+}

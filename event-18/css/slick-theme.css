@@ -1,0 +1,327 @@
+﻿@charset 'UTF-8';
+/* Slider */
+/*.slick-loading .slick-list {
+	background: #fff url('./ajax-loader.gif') center center no-repeat;
+}*/
+/* Icons */
+/*@font-face {
+	font-family: 'slick';
+	font-weight: normal;
+	font-style: normal;
+	src: url('./fonts/slick.eot');
+	src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}*/
+/* Arrows */
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 17%;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 15px 20px;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: #d51d5d;
+    z-index: 99;
+    transition: all ease-in-out .3s;
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+}
+
+    .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+        opacity: 1;
+    }
+
+    .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+        opacity: .25;
+    }
+
+    .slick-prev:before, .slick-next:before {
+        font-family: 'slick';
+        font-size: 20px;
+        line-height: 1;
+        opacity: .75;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+.slick-prev {
+    right: -1px;
+}
+
+    .slick-prev:hover, .slick-next:hover {
+        background-position: 15px 12px;
+        background-color: #411d52;
+    }
+
+.home-slider .slick-prev {
+    left: 25px;
+    z-index: 99;
+}
+
+.quality-slick-slider .slick-prev {
+    left: 0px;
+    z-index: 11;
+}
+
+[dir='rtl'] .slick-prev {
+    right: -25px;
+    left: auto;
+}
+
+.slick-prev:before {
+    content: " ";
+    background-image: url(../images/left-arrow.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    width: 10px;
+    height: 16px;
+    transition: all ease-in-out .3s;
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+}
+
+.slick-prev:hover:before {
+    background-position: -12px 0;
+}
+
+.home-slider .slick-prev:before {
+    content: url(../images/left-arrow.png);
+}
+
+.quality-slick-slider .slick-prev:before {
+    content: url(../images/left-arrow.png);
+}
+
+.slick-next {
+    right: -52px;
+}
+
+.home-slider .slick-next {
+    right: 25px;
+}
+
+.quality-slick-slider .slick-next {
+    right: 0px;
+}
+
+.associated-logo-slider .slick-slide img {
+    display: block;
+    padding: 15px;
+}
+
+[dir='rtl'] .slick-next {
+    right: auto;
+    left: -25px;
+}
+
+.slick-next:before {
+    content: " ";
+    background-image: url(../images/right-arrow.png);
+    background-repeat: no-repeat;
+    background-position: -12px 0;
+    display: inline-block;
+    width: 10px;
+    height: 16px;
+    transition: all ease-in-out .3s;
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+}
+
+.slick-next:hover:before {
+    background-position: 0px 0;
+}
+
+.home-slider .slick-next:before {
+    content: url(../images/right-arrow.png);
+}
+
+.quality-slick-slider .slick-next:before {
+    content: url(../images/right-arrow.png);
+}
+/* Dots */
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.product-slider.slick-dotted.slick-slider {
+    margin-bottom: 70px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+    .slick-dots li {
+        position: relative;
+        left: -28%;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+        .slick-dots li button {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            cursor: pointer;
+            color: transparent;
+            border: 0;
+            outline: none;
+            background: transparent;
+        }
+
+            .slick-dots li button:hover, .slick-dots li button:focus {
+                outline: none;
+            }
+
+                .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+                    opacity: 1;
+                }
+
+            .slick-dots li button:before {
+                font-family: 'slick';
+                font-size: 6px;
+                line-height: 20px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                opacity: .55;
+                color: black;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+        .slick-dots li.slick-active button:before {
+            opacity: .75;
+            color: black;
+        }
+
+.product-slider .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    left: -28px;
+}
+
+    .product-slider .slick-dots li button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 12px;
+        height: 12px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background-color: #007a83;
+        border-radius: 50%;
+    }
+
+.product-slider .slick-dots .slick-active button {
+    background-color: #fff;
+}
+
+.product-slider .slick-dots li button:hover {
+    background-color: #fff;
+}
+
+.product-slider .slick-dots {
+    position: absolute;
+    bottom: 0px;
+    right: -20px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: right;
+    margin-bottom: 5px;
+}
+/*testominals slider*/
+.testominals-slider .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    left: 17%;
+    outline: none;
+    border: none;
+}
+
+    .testominals-slider .slick-dots li button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 12px;
+        height: 12px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background-color: #bfbfbf;
+        border-radius: 50%;
+    }
+
+.testominals-slider .slick-dots .slick-active button {
+    background-color: #00a3af;
+}
+
+.testominals-slider .slick-dots li button:hover {
+    background-color: #00a3af;
+}
+
+.testominals-slider .slick-dots {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: right;
+    bottom: -7px;
+    right: 145px;
+}
+
+.testominals-slider.slick-dotted.slick-slider {
+    margin-bottom: 0px;
+}

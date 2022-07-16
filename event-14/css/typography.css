@@ -1,0 +1,366 @@
+/*
+
+Template: EPY - Event and Conference Responsive HTML5 Template
+Author: iqonicthemes.in
+Version: 1.0
+Design and Developed by: iqonicthemes.in
+
+*/
+
+
+/*================================================
+[  Table of contents  ]
+================================================
+
+Import Css
+Font
+General
+Extra class
+Text color
+Background  color
+Section Title
+Buttons
+loader
+Back to Top
+Form
+
+======================================
+[ End table content ]
+======================================*/
+
+
+/*---------------------------------------------------------------------
+Import Css
+-----------------------------------------------------------------------*/
+
+@import url("all.min.css");
+@import url("owl.carousel.min.css");
+@import url("magnific-popup.css");
+@import url("font-awesome.min.css");
+@import url("ionicons.min.css");
+@import url("typicon.min.css");
+@import url("wow.css");
+
+/*======================================
+ Font
+======================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap');
+
+/*---------------------------------------------------------------------
+  General
+-----------------------------------------------------------------------*/
+
+*::-moz-selection {
+  background: #0d1e67;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #0d1e67;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #0d1e67;
+  color: #fff;
+  text-shadow: none;
+}
+
+html,
+body {
+  overflow: inherit !important;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #17363a;
+  overflow-x: hidden;
+}
+
+a,
+.button {
+  color: #59597e;
+}
+
+a:focus {
+  text-decoration: none !important;
+}
+
+a,
+.button,
+input {
+  outline: medium none !important;
+  color: #0D1E67;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Amiri', serif;
+  color: #17363a;
+  margin: 0;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  font-weight: 800;
+  line-height: 1.1;
+
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 60px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+
+/*---------------------------------------------------------------------
+Extra class
+---------------------------------------------------------------------*/
+
+.overflow-h {
+  overflow: hidden;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.overview-block-ptb {
+  padding: 120px 0;
+}
+
+.overview-block-pt {
+  padding: 120px 0 0 0;
+}
+
+.overview-block-pb {
+  padding: 0 0 120px 0;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+hr {
+  margin: 0;
+  padding: 0px;
+  border-bottom: 1px solid #eeeeee;
+  display: block;
+  width: 100%;
+  border-top: 0px;
+  line-height: 1px;
+}
+
+
+/*---------------------------------------------------------------------
+Text color
+-----------------------------------------------------------------------*/
+
+.main-color {
+  color: #17363a;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-red {
+  color: #e14434;
+}
+.text-blue {
+  color: #277379;
+}
+.text-orange {
+  color: #e18b54;
+}
+
+
+
+/*---------------------------------------------------------------------
+Background  color
+-----------------------------------------------------------------------*/
+
+.main-bg {
+  background: #17363a;
+}
+
+.blue-bg {
+  background: #277379;
+}
+
+.pink-bg {
+  background: #fedbc4;
+}
+.red-bg {
+  background: #e14434;
+}
+.orange-bg {
+  background: #e18b54;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------
+   Section Title
+-----------------------------------------------------------------------*/
+.iq-title-box .iq-subtitle:before {
+  position: absolute;
+  right: -12px;
+  top: -24px;
+  content: "\f028";
+  font-size: 16px;
+  font-family: 'FontAwesome';
+}
+
+/*---------------------------------------------------------------------
+  Button 
+-----------------------------------------------------------------------*/
+.iq-button {
+  color: #ffffff;
+  background: #e14434;
+  text-decoration: none;
+  padding: 15px 30px;
+  line-height: 16px;
+  border: none;
+  width: auto;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+
+}
+.iq-button:hover,
+.iq-button:focus {
+    color: #ffffff;
+    background: #277379;
+    text-decoration: none;
+}
+
+
+.iq-button-white {
+  color: #e14434;
+  background: #ffffff;
+  text-decoration: none;
+  padding: 15px 30px;
+  line-height: 16px;
+  border: none;
+  width: auto;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+
+}
+.iq-button-white:hover,
+.iq-button-white:focus {
+    color: #ffffff;
+    background: #277379;
+    text-decoration: none;
+}
+
+
+/*---------------------------------------------------------------------
+  Loader 
+-----------------------------------------------------------------------*/
+
+#loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 9999;
+}
+
+#loading img {
+  width: 120px;
+}
+
+
+/*---------------------------------------------------------------------
+                             Back to Top
+-----------------------------------------------------------------------*/
+
+#back-to-top .top {
+  z-index: 999;
+  position: fixed;
+  margin: 0px;
+  color: #ffffff;
+  background: #e14434;
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  z-index: 999;
+  font-size: 26px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+ }
+
+#back-to-top .top:hover {
+  background: #277379;
+  color: #0D1E67;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}

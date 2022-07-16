@@ -1,0 +1,597 @@
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+/* grid
+------------------------- */
+
+.grid {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 0px 0px 5px;
+}
+
+    /* clearfix */
+    .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+/* ---- banner ---- */
+
+.grid--has-banner {
+    position: relative;
+}
+
+.static-banner {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 5px 15px;
+    color: white;
+    background: #A2C;
+    z-index: 2; /* above items */
+}
+
+/* ---- centered ---- */
+
+.grid--centered {
+    margin: 10px auto;
+}
+
+/* ---- counting ---- */
+
+.grid--counting {
+    counter-reset: grid-item;
+}
+
+    .grid--counting .grid-item:before {
+        counter-increment: grid-item;
+        content: counter(grid-item);
+        display: block;
+        color: white;
+        padding-top: 0.2em;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+/* ---- stamp ---- */
+
+.grid--has-stamp {
+    position: relative;
+}
+
+/* ---- grid--fixed-width ---- */
+
+.grid--fixed-width {
+    width: 320px;
+}
+
+/* grid-image-item
+------------------------- */
+
+.grid-image-item,
+.grid--images .grid-sizer {
+    width: 33.33%;
+}
+
+.grid-image-item {
+    float: left;
+}
+
+    .grid-image-item img {
+        display: block;
+        max-width: 100%;
+    }
+
+/* grid-item
+------------------------- */
+
+.grid-item {
+    width: 25%;
+    float: left;
+    padding: 0 15px 30px;
+}
+
+    .grid-item a {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+
+        .grid-item a:hover .grid-hover {
+            background: rgba(139,27,89,0.8);
+            background: -moz-linear-gradient(top, rgba(139,27,89,0.8) 0%, rgba(65,29,82,0.6) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(139,27,89,0.8)), color-stop(100%, rgba(65,29,82,0.6)));
+            background: -webkit-linear-gradient(top, rgba(139,27,89,0.8) 0%, rgba(65,29,82,0.6) 100%);
+            background: -o-linear-gradient(top, rgba(139,27,89,0.8) 0%, rgba(65,29,82,0.6) 100%);
+            background: -ms-linear-gradient(top, rgba(139,27,89,0.8) 0%, rgba(65,29,82,0.6) 100%);
+            background: linear-gradient(to bottom, rgba(139,27,89,0.8) 0%, rgba(65,29,82,0.6) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b1b59', endColorstr='#411d52', GradientType=0 );
+        }
+
+.grid-hover {
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+}
+
+    .grid-hover img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+    }
+
+.grid-item a:hover .grid-hover img {
+    opacity: 1;
+}
+
+.grid-item--width2 {
+    width: 50%;
+}
+
+.grid-item--width3 {
+    width: 75%;
+}
+
+.grid-item--height2 {
+    height: auto;
+}
+
+.grid-item--height3 {
+    height: auto;
+}
+
+.grid-item--height4 {
+    height: auto;
+}
+
+.grid-item--gigante {
+    width: 240px;
+    height: 180px;
+    background: #F90;
+    z-index: 2; /* keep it above other items */
+}
+
+/* ---- clickable ---- */
+
+.grid--clickable .grid-item:hover {
+    border-color: white;
+    background: #A2C;
+    cursor: pointer;
+}
+
+/* ---- fluid-5-col ---- */
+
+.grid--fluid-5-col .grid-sizer,
+.grid--fluid-5-col .grid-item {
+    width: 20%;
+}
+
+.grid--fluid-5-col .grid-item--width2,
+.grid--fluid-5-col .grid-item--width3 {
+    width: 40%;
+}
+
+/* ---- gutter ---- */
+
+.grid--gutter .grid-item--width2 {
+    width: 170px;
+}
+
+.grid--gutter .grid-item--width3 {
+    width: 260px;
+}
+
+.grid--gutter-bottom .grid-item {
+    margin-bottom: 10px;
+}
+
+/* ---- grid--fluid-gutter ---- */
+
+.grid--fluid-gutter .grid-item,
+.grid--fluid-gutter .grid-sizer {
+    width: 22%;
+}
+
+.grid--fluid-gutter .gutter-sizer {
+    width: 4%;
+}
+
+.grid--fluid-gutter .grid-item--width2,
+.grid--fluid-gutter .grid-item--width3 {
+    width: 48%;
+}
+
+/* hero
+------------------------- */
+
+.hero-grid {
+    padding: 10px 1%;
+    margin: 20px 0;
+    background: white;
+    border-radius: 10px;
+}
+
+/* necessary for proper sizing with margins */
+.hero-grid__grid-sizer {
+    position: absolute;
+}
+
+.hero-grid__item,
+.hero-grid__grid-sizer {
+    width: 47%;
+    margin: 0 1% 20px 1%;
+}
+
+.hero-grid__gutter-sizer {
+    width: 2%;
+}
+
+.hero-grid__item {
+    float: left;
+    border-radius: 8px;
+    background: #D8D6D2;
+    margin-bottom: 20px;
+}
+
+/* ----  ---- */
+
+.hero__title {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 3rem;
+    color: #D26;
+}
+
+.hero__tagline {
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+}
+
+/* ---- texty ---- */
+
+.hero-grid__item--texty {
+    padding: 10px;
+}
+
+.hero-grid__item--width2,
+.hero-grid__item--width3 {
+    width: 96%;
+}
+
+/* ---- ---- */
+
+.hero-grid__big-button {
+    position: relative;
+    display: block;
+    padding: 10px;
+    background: #D26;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+    .hero-grid__big-button:hover {
+        background: #A2C;
+        color: white;
+    }
+
+.big-button__icon {
+    width: 24px;
+    height: 24px;
+}
+
+    .big-button__icon path {
+        fill: white;
+    }
+
+/* ----  ---- */
+
+.hero__what-is-title {
+    margin: 0 0 10px;
+}
+
+.hero__what-is-description {
+    margin: 0;
+}
+
+/* ---- .hero-grid__example-link ---- */
+
+.hero__example-link {
+    display: block;
+    background: #D26;
+    border-radius: 8px;
+    color: white;
+}
+
+    .hero__example-link:hover {
+        background: #A2C;
+        color: white;
+    }
+
+.hero__example-link__img {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.hero__example-link__title {
+    margin: 0;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* enough width for 4 columns */
+@media screen and ( min-width: 768px ) {
+
+    .hero-grid__grid-sizer,
+    .hero-grid__item {
+        width: 22.5%;
+    }
+
+    .hero-grid__item--width2 {
+        width: 47%;
+    }
+
+
+    .hero-grid__item--width3 {
+        width: 71.5%;
+    }
+
+    .hero__title {
+        font-size: 6rem;
+    }
+
+    .hero__tagline {
+        font-size: 2rem;
+    }
+
+    .hero__what-is-title {
+        font-size: 2rem;
+    }
+
+    .hero__what-is-description {
+        font-size: 1.1rem;
+    }
+
+    .hero-grid__big-button {
+        padding-left: 60px;
+        min-height: 60px;
+    }
+
+    .big-button__icon {
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@charset "UTF-8";
+
+/* page-nav
+------------------------- */
+
+.page-nav {
+    padding: 1.0em 0;
+    font-size: 0.8rem;
+    z-index: 2; /* above packeries */
+}
+
+.page-nav__item {
+    display: inline-block;
+}
+
+    .page-nav__item:after {
+        content: ' •';
+        margin: 0 10px;
+        opacity: 0.5;
+    }
+
+    .page-nav__item:last-child:after {
+        content: none;
+    }
+
+/* desktop */
+@media screen and ( min-width: 1100px ) {
+
+    .page-nav {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 200px;
+        list-style: none;
+        padding: 0;
+        padding: 10px;
+    }
+
+    .page-nav__item {
+        display: block;
+        margin-bottom: 4px;
+        margin-left: 0;
+    }
+
+        .page-nav__item:after {
+            content: none;
+        }
+
+        .page-nav__item a {
+            display: block;
+        }
+
+    .page-nav__item--h3 a {
+        padding-left: 10px;
+    }
+}
+
+/* fix .page-nav only if we have enough height */
+@media screen and ( min-width: 1100px ) and ( min-height: 540px ) {
+    .page-nav {
+        position: fixed;
+    }
+}
+
+/* refactor-shirt
+------------------------- */
+
+.refactor-shirt {
+    margin: 40px 0;
+}
+
+.refactor-shirt__title {
+    font-size: 1.6rem;
+}
+
+.refactor-shirt__image {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 10px;
+}
+
+/* site-footer
+------------------------- */
+
+.site-footer {
+    color: #888;
+    background: #F8F5F2;
+    padding: 40px 0;
+    position: relative;
+    z-index: 10; /* above page-nav */
+}
+
+/* site nav
+------------------------- */
+
+
+
+/* bottom nav */
+.content ~ .site-nav .container {
+    position: relative;
+    margin-top: 80px;
+    border-top: 2px solid white;
+    border-bottom: none;
+}
+
+.site-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .site-nav__list:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+.site-nav__item {
+    width: 33.333%;
+    float: left;
+    line-height: 28px;
+}
+
+    .site-nav__item a {
+        display: block;
+        padding: 5px;
+    }
+
+.site-nav__item--homepage {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+    .site-nav__item--homepage a {
+        color: #D26;
+    }
+
+.site-nav__item a:hover {
+    background: #D26;
+    color: white;
+}
+
+.site-nav__item a:active {
+    background: white;
+    color: #D26;
+}
+
+/* selected */
+.page--options .site-nav__item--options a,
+.page--methods .site-nav__item--methods a,
+.page--events .site-nav__item--events a,
+.page--extras .site-nav__item--extras a,
+.page--faq .site-nav__item--faq a {
+    color: white;
+}
+
+.page--index .site-nav__item--homepage {
+    visibility: hidden;
+}
+
+/* size at which it can fit */
+@media screen and ( min-width: 768px ) {
+
+    .site-nav__item {
+        width: auto;
+        font-size: 1.15rem;
+        line-height: 70px;
+    }
+
+        .site-nav__item a {
+            padding: 0px 25px;
+        }
+
+    .site-nav__item--homepage {
+        font-size: 1.5rem;
+    }
+}
+
+@charset "UTF-8";
+/* variable
+------------------------- */
+
+.variable {
+    margin: 0.5em 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: hsla(0, 0%, 0%, 0.075);
+}
+
+.variable__type {
+    color: #27C;
+}
+
+.variable__type,
+.variable__description {
+    margin-left: 10px;
+}
+
+    .variable__type:before,
+    .variable__description:before {
+        content: '·';
+        padding-right: 0.4em;
+        display: inline-block;
+    }
